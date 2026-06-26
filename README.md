@@ -6,3 +6,4 @@ python3 is required tho
 
 <img width="1040" height="255" alt="image" src="https://github.com/user-attachments/assets/cbc7bafc-477d-4d77-9399-2256347c85bc" />
 
+guide: open your terminal and type "gcc cliOS.c -o cliOS" to compile it and run
