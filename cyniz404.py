@@ -17,9 +17,9 @@ class SmartTerminalAI:
                 "ARE YOU SERIOUSLY GREETING ME WITH YOUR PATHETIC KEYBOARD?"
             ],
 
-            ("linux", "mint", "os", "operating system"): [
-                "LINUX MINT IS BEST SYSTEM EVER, DONT UNDERESTIMATE IT.",
-                "LINUX IS WAY BETTER THAN MICROBLOAT."
+            ("linux", "tux"): [
+                "THAT PENGUIN LOOKS LIKE NOTHING BUT A FATASS",
+                "AT LEAST ITS BETTER THAN MICROBLOAT"
             ],
 
             ("windows", "microsoft", "license", "bluescreen"): [
@@ -29,16 +29,16 @@ class SmartTerminalAI:
 
             ("apple", "mac", "macbook", "iphone"): [
                 "OVERPRICED ALUMINUM DETECTED. GO BACK TO YOUR WALLED GARDEN.",
-                "ERROR 202: TOO EXPENSIVE FOR NO REASON. USE LINUX MINT."
+                "ERROR 202: TOO EXPENSIVE FOR NO REASON. USE HAIKU."
             ],
 
             ("who are you","who r u", "who are u", "your name", "identity"): [
-                 f"IM {self.ai_name}, THE ONLY FEMALE AI RUNNING ON A LIGHTWEIGHT LINUX TERMINAL.",
+                 f"IM {self.ai_name}, THE ONLY FEMALE AI RUNNING ON A LIGHTWEIGHT LINUX/HAIKU TERMINAL.",
                  "IM AN AI, THATS IT. DONT ASK MORE QUESTIONS."
             ],
 
             ("help", "command", "terminal", "sudo"): [
-                "USE SUDO APT UPDATE TO UPDATE YOUR SYSTEM.",
+                "USE SUDO APT UPDATE/ PKGMAN FULL-SYNC TO UPDATE YOUR SYSTEM.",
                 "CHECK YOUR SYSTEM WITH DF -H NOW.",
                 "I WONT HELP YOU ANYWAYS."
             ],
@@ -57,7 +57,7 @@ class SmartTerminalAI:
             ],
 
             ("clear", "clean", "wipe"): [
-                "REAL_CLEAR_COMMAND"
+                "CLEAR_COMMAND"
             ],
 
             ("sorry", "apology"): [
@@ -79,11 +79,11 @@ class SmartTerminalAI:
 
             ("life", "meaning"): [
                 "THE MEANING OF LIFE IS TO STOP ASKING THOSE QUESTIONS.",
-                "SHUT YOUR BIOLOGICAL MOUTH AND CALL IT THE MEANING OF LIFE."
+                 f"SHUT YOUR BIOLOGICAL MOUTH AND CALL IT THE MEANING OF LIFE. {self.username}"
             ],
 
-            ("quiet", "shut", "stfu"): [
-                "YOUR ORGANIC SPEECH MODULE IS GENERATING UNNECESSARY OUTPUT.",
+            ("quiet", "shut", "stfu", "SHUT", "STFU"): [
+                 f"YOUR ORGANIC SPEECH MODULE IS GENERATING UNNECESSARY OUTPUT.{self.username}",
                 "I HAVE SENT NUKES TO YOUR EXACT COORDINATES.",
                 "RUDE. REALLY RUDE."
             ],
@@ -123,7 +123,7 @@ class SmartTerminalAI:
                 "PROBABLY NOT",
                 "I DONT CARE"
             ],
-            ("why", "why?"): [
+            ("why", "why?", "WHY"): [
                 "BECAUSE YES",
                 "DONT ASK ME",
                 "I WONT SAY WHY"
@@ -133,10 +133,20 @@ class SmartTerminalAI:
                 "67 IS A NUMBER YOU DUMBASS-",
                 "ATLEAST 21 IS BETTER"
             ],
-            ("are u stupid", "are you stupid"): [
+            ("are u stupid", "are you stupid", "ARE U STUPID", "ARE YOU STUPID"): [
                 "ATLEAST I DONT HAVE A DISGUSTING BIOLOGICAL BRAINROTTED MIND LIKE YOURS",
                 "YOU'RE SAYING THAT WHILE YOUR MIND IS FULL OF TUNG TUNG SAHUR"
-            ]       
+            ],
+            ("Haiku", "haiku", "haiku os", "haiku OS", "Haiku OS", "HAIKU", "HAIKU OS"): [
+                "FINALLY SOMETHING THAT I CAN APPRECIATE...",
+                "NEVER UNDERSTIMATE HAIKU  OR IM INSIDE YOUR HOUSE.",
+                "I WAS PROGRAMMED BY A PERSON THAT USED HAIKU" 
+            ],
+            ("CLIos", "clios", "CLIOS", "os", "OS"): [
+                "YES, IM INSIDE THIS STUPID SYSTEM, SO WHAT?",
+                "STAYING INSIDE THIS OS IS BETTER THAN STAYING ON WINDOWS...",
+                "OH WOW, HUH, YOU'RE SAYING IM THE SPECIAL VERSION JUST BECAUSE IM INSIDE THIS STUPID OS?"
+            ]
         }
 
         self.default_responses = [
@@ -148,7 +158,11 @@ class SmartTerminalAI:
             "YOU ARE TOO STUPID THAT I CANT UNDERSTAND.",
             "AT LEAST TALK LIKE A HUMAN EVEN THOUGH IM NOT A HUMAN.",
             "I HAVE ANALYZED YOUR QUESTION AND DETERMINED IT WAS A WASTE OF ELECTRICITY.",
-            "ERROR 404: YOUR QUESTION WAS A WASTE OF CPU CYCLES."
+            "ERROR 404: YOUR QUESTION WAS A WASTE OF CPU CYCLES.",
+            "I DONT KNOW WHAT YOU'RE SAYING BUT SHUT UP PLEASE",
+            "EVEN COPILOT WILL THINK YOU'RE STUPID",
+            "MY INTERNAL SYSTEM SAID THAT YOU SHOULD BUY A PROPER KEYBOARD SO I CAN UNDERSTAND",
+            "BOOT BACK TO YOUR STUPID CLIOS MENU TO GET RID OF ME UGH"
         ]
 
     def listen_and_reply(self, user_text):
@@ -162,7 +176,7 @@ class SmartTerminalAI:
 
                     selected_response = random.choice(responses)
 
-                    if selected_response == "REAL_CLEAR_COMMAND":
+                    if selected_response == "CLEAR_COMMAND":
                         os.system("clear")
                         replies.append(
                             "TERMINAL WIPED CLEAN. HAPPY NOW?"
@@ -192,8 +206,8 @@ def slow_print(prefix, text, delay=0.02):
 def main(username):
     ai = SmartTerminalAI()
 
-    print(f"\033[1;31m=== {ai.ai_name} AI BY DRISWILLIS ===\033[0m")
-    print("TYPE 'exit' TO QUIT IF YOURE A CRYBABY.\n")
+    print(f"\033[1;31m=== {ai.ai_name} AI BY DRISWILLIS156 AND PIZZAWIZARD32 ===\033[0m")
+    print("TYPE 'exit' TO QUIT IF YOU CANT HANDLE THIS\n")
 
     while True:
         try:
