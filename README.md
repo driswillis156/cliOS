@@ -8,4 +8,4 @@ python3 is required tho
 
 guide: open your terminal and type "gcc cliOS.c -o cliOS" to compile it and run
 
-linux is reccomended
+linux and haiku is reccomended
