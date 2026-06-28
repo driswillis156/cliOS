@@ -13,10 +13,10 @@
 int main(void) {
     int choice;
 
-     printf(" ###  #     #   ##     ## \n");
-     printf("#     #     #  #  #   #\n");
-     printf("#     #     #  #  #   #\n");
-     printf(" ###  # #   #   ##  ##  \n");
+     printf("===== ###  #     #   ##     ## =====\n");
+     printf("=====#     #     #  #  #   #=====\n");
+     printf("=====#     #     #  #  #   #=====\n");
+     printf("===== ###  # #   #   ##  ##===== \n");
      printf("  \n");
      printf("==cliOS PRE-ALPHA TEST===\n");
      printf("=======by driswillis=====\n");
@@ -25,7 +25,7 @@ int main(void) {
      printf(" 2. CLIpaint (W.i.P)\n");
      printf(" 3. CLIsnake (could be unstable)\n");
      printf(" ===more are coming out soon, so yeah, just.. dont use this OS mainstream lol=== \n");
-     printf("===MISC: type 4 to open cyniz 404 bot (NEEDS PYTHON3 FOR THE CODE TO WORK===\n)");
+     printf(" ===MISC: type 4 to open cyniz 404 bot (NEEDS PYTHON3 FOR THE CODE TO WORK)=== \n)");
      printf(" anyways type your choice here: ");
 
      scanf("%d", &choice);
